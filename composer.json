@@ -1,0 +1,42 @@
+{
+    "name": "tcgunel/omniship-ptt",
+    "description": "PTT Kargo carrier for Omniship",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../omniship",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "tcgunel/omniship-common": "@dev"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^2.0",
+        "php-http/mock-client": "^1.6",
+        "nyholm/psr7": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omniship\\PTT\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omniship\\PTT\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
