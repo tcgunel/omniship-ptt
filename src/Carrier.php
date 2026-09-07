@@ -93,7 +93,7 @@ class Carrier extends AbstractSoapCarrier
      * @param class-string<RequestInterface> $class
      * @param array<string, mixed> $parameters
      */
-    protected function createRequest(string $class, array $parameters): RequestInterface
+    protected function createRequest(string $class, array $parameters, ?string $wsdlUrl = null): RequestInterface
     {
         $service = match ($class) {
             GetTrackingStatusRequest::class => 'GonderiHareketV2',
